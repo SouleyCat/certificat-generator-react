@@ -19,15 +19,15 @@ services:
     depends_on:
       - mysql
 
-  mysql:
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: ''
-      MYSQL_DATABASE: certificat_generator_react
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ''
-    ports:
-      - "3306:3306"
+mysql:
+  image: mysql:latest
+  environment:
+    MYSQL_DATABASE: certificat_generator_react
+    MYSQL_USER: root
+    # Optional: Allow an empty password
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  ports:
+    - "3306:3306"
 
   vite-react-app:
     build:
