@@ -19,8 +19,8 @@ RUN npm run build
 # Use a lightweight nginx image for the final stage
 FROM nginx:alpine
 
-# Copy the built React app from the build stage to the nginx public directory
-COPY --from=build /app/dist /usr/share/nginx/html
+# # Copy the built React app from the build stage to the nginx public directory
+# COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
