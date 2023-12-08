@@ -21,10 +21,10 @@ services:
 
   mysql:
     image: mysql:latest
-    environment:
-      MYSQL_DATABASE: certificat_generator_react
-      MYSQL_USER: root
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    # environment:
+    #   MYSQL_DATABASE: certificat_generator_react
+    #   MYSQL_USER: root
+    #   MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - "3306:3306"
 
