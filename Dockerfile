@@ -1,5 +1,5 @@
 # Use the official PHP image
-FROM php:7.4-fpm
+FROM php:8.2.0
 
 WORKDIR /var/www/html
 
