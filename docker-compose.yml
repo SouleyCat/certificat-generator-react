@@ -30,7 +30,7 @@ services:
       context: .
       dockerfile: react-certificate/Dockerfile
     ports:
-      - "80:80"
+      - "8080:80"
 
   nginx:
     image: nginx:latest
