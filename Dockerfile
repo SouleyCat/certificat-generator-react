@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install PHP-FPM
-RUN apt-get install -y php-fpm
+# Install PHP
+RUN apt-get install -y php
 
 # Copy application files
 COPY . .
@@ -25,6 +25,6 @@ RUN composer install --optimize-autoloader --no-dev
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage
 
-# Expose port 9000 and start PHP-FPM
+# Expose port 9000 and start PHP
 EXPOSE 9000
-CMD ["php-fpm", "-F"]
+CMD ["php"]
