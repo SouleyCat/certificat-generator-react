@@ -17,7 +17,7 @@ COPY . .
 # RUN chown -R www-data:www-data /var/www/html/storage
 
 # Second stage for a lightweight production image
-FROM php:8.2.0-fpm-alpine
+FROM php:8.2.0
 
 WORKDIR /var/www/html
 
