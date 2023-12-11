@@ -1,5 +1,5 @@
-# Use the official PHP image
-FROM php:8.2.0
+# Use a production-ready PHP image
+FROM php:8.2.0-fpm
 
 WORKDIR /var/www/html
 
@@ -22,8 +22,7 @@ RUN composer install --optimize-autoloader --no-dev
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage
 
-# Expose port 9000
 EXPOSE 9000
 
-# Start PHP
-CMD ["php", "-S", "0.0.0.0:9000"]
+# Start PHP-FPM
+CMD ["php-fpm"]
