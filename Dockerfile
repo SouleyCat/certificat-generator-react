@@ -13,8 +13,8 @@ RUN composer install --no-interaction --optimize-autoloader --no-dev
 # Copy the rest of the application files
 COPY . .
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www/html/storage
+# # Set permissions
+# RUN chown -R www-data:www-data /var/www/html/storage
 
 # Second stage for a lightweight production image
 FROM php:8.2.0-fpm-alpine
