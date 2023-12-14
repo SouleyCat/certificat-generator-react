@@ -1,4 +1,4 @@
-FROM php:8.0-fpm-alpine AS base
+FROM php:8.2-fpm-alpine AS base
 ENV EXT_APCU_VERSION=master
 RUN curl -vvv https://github.com/krakjoe/apcu.git
 
